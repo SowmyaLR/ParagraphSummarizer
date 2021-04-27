@@ -2,7 +2,7 @@ import streamlit as st
 from streamlit_ace import st_ace
 from transformers import pipeline
 import os
-os.environ["TOKENIZERS_PARALLELISM"] = False
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
 summarizer = pipeline("summarization")
 
 
