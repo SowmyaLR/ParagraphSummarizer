@@ -9,6 +9,7 @@ def get_summary(content):
     if content:
         content_len = len(content)
         summary = summarizer(content, max_length=content_len, min_length=content_len//2, do_sample=False)
+        print(f"summarized content ====== {summary[0]['summary_text']}")
         return summary[0]["summary_text"]
     else:
         return ""
