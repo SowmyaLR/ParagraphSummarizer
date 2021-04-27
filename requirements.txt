@@ -1,5 +1,5 @@
 wheel
 tensorflow
 transformers==2.5.1
-transformers[tf-cpu]
+streamlit
 streamlit-ace
