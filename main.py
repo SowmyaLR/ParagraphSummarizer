@@ -6,9 +6,12 @@ summarizer = pipeline("summarization")
 
 
 def get_summary(content):
-    content_len = len(content)
-    summary = summarizer(content, max_length=content_len, min_length=content_len/2, do_sample=False)
-    return summary[0]["summary_text"]
+    if content:
+        content_len = len(content)
+        summary = summarizer(content, max_length=content_len, min_length=content_len//2, do_sample=False)
+        return summary[0]["summary_text"]
+    else:
+        return ""
 
 
 LANGUAGES = [
