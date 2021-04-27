@@ -1,3 +1,4 @@
+wheel
 tensorflow
 transformers[tf-cpu]
 streamlit-ace
